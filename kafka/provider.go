@@ -26,14 +26,14 @@ func Provider() *schema.Provider {
 			"client_cert_file": &schema.Schema{
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("KAFKA_CLIENT_CERT", nil),
+				DefaultFunc: schema.EnvDefaultFunc("KAFKA_CLIENT_CERT_FILE", nil),
 				Description: "Path to a file containing the client certificate.",
 				Deprecated:  "This parameter is now deprecated and will be removed in a later release, please use `client_cert` instead.",
 			},
 			"client_key_file": &schema.Schema{
 				Type:        schema.TypeString,
 				Optional:    true,
-				DefaultFunc: schema.EnvDefaultFunc("KAFKA_CLIENT_KEY", nil),
+				DefaultFunc: schema.EnvDefaultFunc("KAFKA_CLIENT_KEY_FILE", nil),
 				Description: "Path to a file containing the private key that the certificate was issued for.",
 				Deprecated:  "This parameter is now deprecated and will be removed in a later release, please use `client_key` instead.",
 			},
